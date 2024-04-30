@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+
+# Get input
+print "Enter the principal amount: ";
+chomp($principal = <STDIN>);
+print "Enter the annual interest rate (as a percentage): ";
+chomp($rate = <STDIN>);
+print "Enter the number of years: ";
+chomp($years = <STDIN>);
+
+# Compute compound interest
+$rate /= 100;  # Convert percentage to decimal
+$amount = $principal * (1 + $rate) ** $years;
+
+# Output the result
+print "The amount after $years years is: $amount\n";
